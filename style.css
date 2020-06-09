@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    
+}
+.tools {
+    display: flex;
+    justify-content: space-evenly;
+    
+} 
+.tool{
+    width: 3rem;
+}
+.active{
+    padding: 0.5rem;
+    background-color: grey;
+    border-radius: 50%;
+}
+.pencil,.eraser,.sticky{
+    position: relative;
+}
+.pencil-option,.eraser-options{
+    height: 8rem;
+    width: 8rem;
+    background-color: yellow;
+    position: absolute;
+    top:110%;
+     left:-40px;
+}
+.pencil-slider{
+    height:50%;
+    background-color: green;
+
+}
+.pencil-colors{
+    height: 50%;
+    background-color: rgb(83,18,18);
+    display: flex;
+    justify-content: space-evenly;
+}
+.blue,.red,.black,.minimize,.close{
+    margin-top: 0.25rem;
+    border-radius: 50%;
+    width: 25%;
+    height: 80%;
+}
+.blue{
+    background-color: blue;
+}
+.red{
+    background-color: red;
+}
+.black{
+    background-color: black;
+}
+.pencil-option,.eraser-options{
+    display: none;
+}
+.show{
+    display: block;
+}
+.sticky-pad{
+    position: absolute;
+    left: 40%;
+    top: 40%;
+}
+.nav{
+    height: 3rem;
+    width: 10rem;
+    background-color: darkgrey;
+    display: flex;
+   justify-content: flex-end;
+}
+.writing-pad{
+    background-color: coral;
+}
+.close{
+    margin-left: 0.5rem;
+    background-color: red;
+}
+.minimize{
+    background-color: green;
+}
+.tool-img{
+    height: 3rem;
+    width: 3rem;
+}
+#fileInput{
+    display: none;
+}

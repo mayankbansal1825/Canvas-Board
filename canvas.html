@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas class="board"></canvas>
+    <script>
+        var board=document.querySelector(".board");
+        board.height=window.innerHeight;
+        board.width=window.innerWidth;
+        var ctx=board.getContext("2d");
+        ctx.fillStyle="red";
+        //x,y,w,h
+        ctx.fillRect(0,0,window.innerWidth,window.innerHeight);
+        ctx.fillStyle="green";
+        ctx.fillRect(0,0,600,400);
+
+
+        //stroke=boundary
+        ctx.strokeStyle="yellow";
+        // ctx.strokeStyle="grey";
+        ctx.lineWidth=10;
+        ctx.strokeRect(40,60,400,500);
+
+        //lines
+        //a new path is defined(0,0)
+        ctx.beginPath();
+        ctx.fillStyle="orange";
+        //without drawing move to a particular position in canvas
+        ctx.moveTo(150,150);
+        ctx.lineTo(350,350);
+        ctx.lineTo(400, 500);
+        ctx.lineTo(150, 200);
+        ctx.closePath();
+        ctx.stroke();//for boundary
+        
+        ctx.fill();//red colour in this
+
+       //circle
+       function degTORad(degree){
+           return degree*Math.PI/180;
+       }
+        ctx.beginPath();
+        ctx.arc(700,200,100,degTORad(0),degTORad(360));
+        ctx.fill();
+        ctx.stroke();
+    </script>
+</body>
+</html>
